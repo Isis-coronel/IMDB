@@ -17,3 +17,13 @@ fs.writeFile("imdbBBDD.json", dataJson, (err) => {
 })
 
 console.log(dataJson);
+let parsedJson;
+fs.readFile("imdbBBDD.json", "utf8", (err, data) => {
+    if (err) {
+        console.log(err);
+    }
+    parsedJson = JSON.parse(data);
+    console.log("leer: ", parsedJson);
+})
+
+console.log(dataJson);

@@ -14,3 +14,12 @@ fs.writeFile("imdbBBDD.json", dataJson, function (err) {
     }
 });
 console.log(dataJson);
+var parsedJson;
+fs.readFile("imdbBBDD.json", "utf8", function (err, data) {
+    if (err) {
+        console.log(err);
+    }
+    parsedJson = JSON.parse(data);
+    console.log("leer: ", parsedJson);
+});
+console.log(dataJson);
